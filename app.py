@@ -1,3 +1,9 @@
+import tensorflow as tf
+import keras
+
+print("TensorFlow:", tf.__version__)
+print("Keras:", keras.__version__)
+
 import streamlit as st
 import pandas as pd
 import tensorflow as tf
@@ -11,7 +17,7 @@ st.set_page_config(
 )
 
 # ---------------- Load Model ---------------- #
-model = tf.keras.models.load_model("model.keras")
+model = tf.keras.models.load_model("model.h5")
 
 with open("onehot_encoder_geo.pkl", "rb") as file:
     onehot_encoder_geo = pickle.load(file)
